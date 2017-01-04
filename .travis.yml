@@ -11,8 +11,10 @@ before_deploy:
 
 deploy:
   provider: releases
+  on:
+    tags: true
+  file: $RELEASE_FILE
   skip_cleanup: true
   api_key: $API_KEY
-  file: $RELEASE_FILE
   on_success:
     - echo "$RELEASE_FILE deployed!"
