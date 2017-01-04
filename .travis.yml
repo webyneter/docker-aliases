@@ -1,16 +1,18 @@
 language: bash
 
-before_script:
-  - echo "Combining all zsh files into $RELEASE_FILE, separating them from each other with $RELEASE_FILE_SEPARATOR_COUNT newlines..."
+
 script:
+  - echo "Combining all zsh files into $RELEASE_FILE, separating them from each other with $RELEASE_FILE_SEPARATOR_COUNT newlines..."
   - find . -type f -name "*.zsh" -exec cat {} \; -exec bash -c "printf '\n%.0s' {1..$RELEASE_FILE_SEPARATOR_COUNT}" \; > $RELEASE_FILE
+
 
 before_deploy:
   - echo "Deploying $RELEASE_FILE..."
+
 deploy:
   provider: releases
   skip_cleanup: true
   api_key: $API_KEY
   file: $RELEASE_FILE
   on_success:
-    - echo "$RELEASE_FILE deployed! "
+    - echo "$RELEASE_FILE deployed!"
