@@ -13,7 +13,7 @@ Make sure to provide `$ZSH_CUSTOM` in your `~/.zshrc`.
 Then, download the latest release to `$ZSH_CUSTOM`:
 
 <pre>
-wget https://github.com/webyneter/zsh-goodies/releases/download/<strong>0.0.1</strong>/webyneter-zsh-goodies.zsh \
+wget https://github.com/webyneter/zsh-goodies/releases/download/<strong>1.0.0</strong>/webyneter-zsh-goodies.zsh \
 $ZSH_CUSTOM
 </pre>
 
