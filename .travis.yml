@@ -2,8 +2,8 @@ language: bash
 
 
 env:
-  - RELEASE_FILE="webyneter-zsh-goodies.zsh"
-  - RELEASE_FILE_SEPARATOR_COUNT="4"
+  - RELEASE_FILE=webyneter-zsh-goodies.zsh
+  - RELEASE_FILE_SEPARATOR_COUNT=4
 
 
 script:
