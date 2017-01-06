@@ -20,9 +20,9 @@ alias dbu="docker build"
 
 # Complex
 
-alias drmi_fall="docker rmi -f $* $(docker images -a -q)"
+drmi_fall() { "docker rmi -f $* $(docker images -a -q)" }
 
-alias drmi_dang="docker rmi $* $(docker images -a -q -f dangling='true')"
+drmi_dang() { "docker rmi $* $(docker images -a -q -f dangling='true')" }
 
 
 
@@ -44,14 +44,14 @@ alias dexec="docker exec"
 
 # Complex
 
-alias dip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
+dip() { "docker inspect --format '{{ .NetworkSettings.IPAddress }}'" }
 
-alias dpsa="docker ps -a"
+dpsa() { "docker ps -a" }
 
-alias dstop_all="docker stop $* $(docker ps -a -q)"
+dstop_all() { "docker stop $* $(docker ps -a -q)" }
 
-alias drm_stop="docker rm $* $(docker ps -q -f status='exited')"
+drm_stop() { "docker rm $* $(docker ps -q -f status='exited')" }
 
-alias drm_all="docker rm $* $(docker ps -a -q)"
+drm_all() { "docker rm $* $(docker ps -a -q)" }
 
-alias drm_fall="docker rm -f $* $(docker ps -a -q)"
+drm_fall() { "docker rm -f $* $(docker ps -a -q)" }
