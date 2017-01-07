@@ -6,7 +6,7 @@ release_job:
   environment:
     name: production
   only:
-    - branches@11-*
+    - 11-make-sure-deploy-artifacts-are-being-created
     # - tags
     # - master
   variables:
