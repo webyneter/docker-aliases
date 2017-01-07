@@ -1,7 +1,6 @@
 # Get all docker-related aliases 
 # (for this one, much thanks to https://github.com/tcnksm/docker-alias/blob/master/zshrc)
 dalias() { alias | grep 'docker' | sed "s/^\([^=]*\)=\(.*\)/\1 => \2/"| sed "s/['|\']//g" | sort; }
-this repository
 
 
 ##########
