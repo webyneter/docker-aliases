@@ -9,7 +9,7 @@ release_job:
     - tags
     - master
   variables:
-    COMBINED_FILE: "webyneter-zsh-goodies.zsh"
+    COMBINED_FILE: "webyneter-zsh-goodies.plugin.zsh"
     COMBINED_FILE_NEWLINE_INBETWEEN_COUNT: "4"
   script:
     - echo "Combining all *.zsh files into a single $COMBINED_FILE, separating those from each other with $COMBINED_FILE_NEWLINE_INBETWEEN_COUNT newlines..."
