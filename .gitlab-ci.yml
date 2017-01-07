@@ -1,18 +1,18 @@
 stages:
-- deploy
+  - deploy
 
 release_job:
   stage: deploy
   environment:
-    - name: production
+    name: production
   only:
     - tags
     - master
   variables:
-    - COMBINED_FILE: "webyneter-zsh-goodies.zsh"
-    - COMBINED_FILE_NEWLINE_INBETWEEN__COUNT: 4
-  scripts:
-    - echo "Combining all *.zsh files into a single $COMBINED_FILE, separating those from each other with $RELEASE_FILE_SEPARATOR_COUNT newlines..."
-    - find . -type f -name "*.zsh" -exec cat {} \; -exec bash -c "printf '\n%.0s' {1..$RELEASE_FILE_SEPARATOR_COUNT}" \; > $COMBINED_FILE
+    COMBINED_FILE: "webyneter-zsh-goodies.zsh"
+    COMBINED_FILE_NEWLINE_INBETWEEN_COUNT: "4"
+  script:
+    - echo 'Combining all *.zsh files into a single $COMBINED_FILE, separating those from each other with $COMBINED_FILE_NEWLINE_INBETWEEN_COUNT newlines...'
+    - find . -type f -name "*.zsh" -exec cat {} \; -exec bash -c "printf '\n%.0s' {1..$COMBINED_FILE_NEWLINE_INBETWEEN_COUNT}" \; > $COMBINED_FILE
   artifacts:
-    - name: "$COMBINED_FILE"
+    name: "$COMBINED_FILE"
