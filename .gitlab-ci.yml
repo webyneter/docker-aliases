@@ -6,8 +6,9 @@ release_job:
   environment:
     name: production
   only:
-    - tags
-    - master
+    - 11-*
+    # - tags
+    # - master
   variables:
     COMBINED_FILE: "webyneter-zsh-goodies.plugin.zsh"
     COMBINED_FILE_NEWLINE_INBETWEEN_COUNT: "4"
