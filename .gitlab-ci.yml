@@ -1,7 +1,7 @@
 stages:
   - deploy
 
-release_job:
+release:
   stage: deploy
   environment:
     name: production
