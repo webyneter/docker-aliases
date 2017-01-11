@@ -27,17 +27,15 @@
 ##########
 
 
-alias di="docker images"
+alias di='docker images'
 
-alias drmi="docker rmi"
+alias drmi='docker rmi'
 
-alias dbu="docker build"
+alias dbu='docker build'
 
+alias drmi_all='docker rmi $* $(docker images -a -q)'
 
-drmi_all() { docker rmi $* $(docker images -a -q) }
-
-drmi_dang() { docker rmi $* $(docker images -q -f dangling='true') }
-
+alias drmi_dang='docker rmi $* $(docker images -q -f dangling="true")'
 
 
 ##############
@@ -45,26 +43,22 @@ drmi_dang() { docker rmi $* $(docker images -q -f dangling='true') }
 ##############
 
 
-alias dps="docker ps"
+alias dps='docker ps'
 
-alias drm="docker rm"
+alias drm='docker rm'
 
-alias dexec="docker exec"
+alias dexec='docker exec'
 
-alias dlog="docker logs"
+alias dlog='docker logs'
 
+alias dip='docker inspect --format "{{ .NetworkSettings.IPAddress }}" $*'
 
-dip() { docker inspect --format '{{ .NetworkSettings.IPAddress }}' $* }
+alias dstop_all='docker stop $* $(docker ps -q -f status="running")'
 
+alias drm_stopped='docker rm $* $(docker ps -q -f status="exited")'
 
-dstop_all() { docker stop $* $(docker ps -a -q) }
+alias drmv_stopped='docker rm -v $* $(docker ps -q -f status="exited")'
 
+alias drm_all='docker rm $* $(docker ps -a -q)'
 
-drm_stopped() { docker rm $* $(docker ps -q -f status='exited') }
-
-drmv_stopped() { drm_stopped -v $* }
-
-
-drm_all() { docker rm $* $(docker ps -a -q) }
-
-drmv_all() { drm_all -v $* }
+alias drmv_all='docker rm -v $* $(docker ps -a -q)'
