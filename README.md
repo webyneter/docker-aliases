@@ -6,8 +6,7 @@ Docker aliases for various shells
 ### [zplug](https://github.com/zplug/zplug)
 
 ```zsh
-zplug "webyneter/docker-aliases", use:zshrc
-zplug install
+zplug "webyneter/docker-aliases", use:docker-aliases.plugin.zsh
 zplug load
 ```
 
