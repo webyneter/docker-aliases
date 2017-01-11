@@ -45,6 +45,8 @@ alias drmi_dang='docker rmi $* $(docker images -q -f dangling="true")'
 
 alias dps='docker ps'
 
+alias dpsl='docker ps -l $*'
+
 alias drm='docker rm'
 
 alias dexec='docker exec'
@@ -68,4 +70,4 @@ alias drmv_all='docker rm -v $* $(docker ps -a -q)'
 # Volumes #
 ###########
 
-alias dpsl='docker ps -l $*'
+alias dvrm_all='docker volume rm $(docker volume ls -q)'
