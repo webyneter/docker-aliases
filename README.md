@@ -1,5 +1,4 @@
 # docker-aliases
-Docker aliases for various shells
 
 
 ## Installation
