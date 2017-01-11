@@ -62,3 +62,10 @@ alias drmv_stopped='docker rm -v $* $(docker ps -q -f status="exited")'
 alias drm_all='docker rm $* $(docker ps -a -q)'
 
 alias drmv_all='docker rm -v $* $(docker ps -a -q)'
+
+
+###########
+# Volumes #
+###########
+
+alias dpsl='docker ps -l $*'
