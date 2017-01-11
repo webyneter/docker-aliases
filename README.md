@@ -1,5 +1,7 @@
 # docker-aliases
 
+Consult [source file](docker-aliases.plugin.zsh) for more details.
+
 
 ## Installation
 
