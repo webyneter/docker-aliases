@@ -71,3 +71,5 @@ alias drmv_all='docker rm -v $* $(docker ps -a -q)'
 ###########
 
 alias dvrm_all='docker volume rm $(docker volume ls -q)'
+
+alias dvrm_dang='docker volume rm $(docker volume ls -q -f dangling="true")'
