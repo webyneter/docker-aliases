@@ -6,16 +6,13 @@ Docker aliases for various shells
 ### [zplug](https://github.com/zplug/zplug)
 
 ```zsh
-zplug "webyneter/docker-aliases", use:zshrc
-zplug install
-zplug load
+$ zplug "webyneter/docker-aliases", use:docker-aliases.plugin.zsh
 ```
 
 ### [Antigen](https://github.com/zsh-users/antigen)
 
 ```zsh
-antigen bundle webyneter/docker-aliases.git
-antigen apply
+$ antigen bundle webyneter/docker-aliases.git
 ```
 
 
