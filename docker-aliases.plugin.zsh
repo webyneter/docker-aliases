@@ -35,7 +35,7 @@ alias dbu='docker build'
 
 alias drmi_all='docker rmi $* $(docker images -a -q)'
 
-alias drmi_dang='docker rmi $* $(docker images -q -f dangling="true")'
+alias drmi_dang='docker rmi $* $(docker images -q -f "dangling=true")'
 
 
 ##############
@@ -55,11 +55,11 @@ alias dlog='docker logs'
 
 alias dip='docker inspect --format "{{ .NetworkSettings.IPAddress }}" $*'
 
-alias dstop_all='docker stop $* $(docker ps -q -f status="running")'
+alias dstop_all='docker stop $* $(docker ps -q -f "status=running")'
 
-alias drm_stopped='docker rm $* $(docker ps -q -f status="exited")'
+alias drm_stopped='docker rm $* $(docker ps -q -f "status=exited")'
 
-alias drmv_stopped='docker rm -v $* $(docker ps -q -f status="exited")'
+alias drmv_stopped='docker rm -v $* $(docker ps -q -f "status=exited")'
 
 alias drm_all='docker rm $* $(docker ps -a -q)'
 
@@ -74,4 +74,4 @@ alias dvls='docker volume ls $*'
 
 alias dvrm_all='docker volume rm $(docker volume ls -q)'
 
-alias dvrm_dang='docker volume rm $(docker volume ls -q -f dangling="true")'
+alias dvrm_dang='docker volume rm $(docker volume ls -q -f "dangling=true")'
