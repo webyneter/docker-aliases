@@ -1,6 +1,6 @@
 # docker-aliases
 
-*Hosted on [GitLab](https://gitlab.com/webyneter/docker-aliases/). Mirrored to [GitHub](https://github.com/webyneter/docker-aliases).*
+*Hosted on [GitLab](https://gitlab.com/webyneter-repositories/tools/docker-aliases). Mirrored to [GitHub](https://github.com/webyneter/docker-aliases).*
 
 Consult [source file](docker-aliases.plugin.zsh) for more details.
 
