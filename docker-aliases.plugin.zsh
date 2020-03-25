@@ -44,7 +44,7 @@ alias dhi='docker history'
 
 alias dps='docker ps'
 
-alias dpsl='docker ps -l $*'
+alias drit='docker run -it'
 
 alias dexec='docker exec'
 
