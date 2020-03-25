@@ -46,7 +46,7 @@ alias dps='docker ps'
 
 alias drit='docker run -it'
 
-alias dexec='docker exec'
+alias deit='docker exec -it'
 
 alias dlog='docker logs'
 
