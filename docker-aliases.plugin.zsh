@@ -46,8 +46,6 @@ alias dps='docker ps'
 
 alias dpsl='docker ps -l $*'
 
-alias drm='docker rm'
-
 alias dexec='docker exec'
 
 alias dlog='docker logs'
@@ -55,6 +53,8 @@ alias dlog='docker logs'
 alias dip='docker inspect --format "{{ .NetworkSettings.IPAddress }}" $*'
 
 alias dstop_all='docker stop $* $(docker ps -q -f "status=running")'
+
+alias drm='docker rm'
 
 alias drm_stopped='docker rm $* $(docker ps -q -f "status=exited")'
 
