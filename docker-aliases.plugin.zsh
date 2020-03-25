@@ -21,11 +21,9 @@
 # SOFTWARE.
 
 
-
 ##########
 # Images #
 ##########
-
 
 alias di='docker images'
 
@@ -38,10 +36,10 @@ alias drmi_all='docker rmi $* $(docker images -a -q)'
 alias drmi_dang='docker rmi $* $(docker images -q -f "dangling=true")'
 
 
+
 ##############
 # Containers #
 ##############
-
 
 alias dps='docker ps'
 
