@@ -22,10 +22,6 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-set -o errexit
-set -o nounset
-set -o noclobber
-
 ##########
 # Images #
 ##########
