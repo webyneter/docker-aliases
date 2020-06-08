@@ -42,6 +42,21 @@ alias drmi_dang='docker rmi $* $(docker images -q -f "dangling=true")'
 
 alias dhi='docker history $*'
 
+dhi_neat() {
+  ### dhi_neat <image name>
+  docker history "${1}" \
+    --no-trunc \
+    --format "{{ .Size }}\t{{ .CreatedBy }}" |
+    sort \
+      --key=1 \
+      --human-numeric-sort \
+      --reverse |
+    column \
+      -t \
+      -s $"\t" |
+    cut \
+      --bytes=-80
+}
 
 ##############
 # Containers #
