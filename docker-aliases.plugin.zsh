@@ -40,7 +40,7 @@ alias drmi_all='docker rmi $* $(docker images -a -q)'
 
 alias drmi_dang='docker rmi $* $(docker images -q -f "dangling=true")'
 
-alias dhi='docker history'
+alias dhi='docker history $*'
 
 
 ##############
