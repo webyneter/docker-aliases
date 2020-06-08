@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # The MIT License (MIT)
 
 # Copyright (c) 2017-2020 Nikita P. Shupeyko
@@ -20,6 +22,9 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+set -o errexit
+set -o nounset
+set -o noclobber
 
 ##########
 # Images #
