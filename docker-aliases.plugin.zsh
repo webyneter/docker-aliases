@@ -69,7 +69,6 @@ alias drm_all='docker rm $* $(docker ps -a -q)'
 
 alias drmv_all='docker rm -v $* $(docker ps -a -q)'
 
-
 ###########
 # Volumes #
 ###########
