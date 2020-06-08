@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 # The MIT License (MIT)
 
 # Copyright (c) 2017-2020 Nikita P. Shupeyko
